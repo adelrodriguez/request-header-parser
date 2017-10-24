@@ -1,0 +1,22 @@
+{
+  "name": "request-header-parser",
+  "version": "1.0.0",
+  "description": "A microservice that tells you your IP address, language and operating system",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adelrodriguez/request-header-parser.git"
+  },
+  "author": "Adel Rodriguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adelrodriguez/request-header-parser/issues"
+  },
+  "homepage": "https://github.com/adelrodriguez/request-header-parser#readme",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
