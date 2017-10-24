@@ -2,6 +2,12 @@ const express = require('express');
 
 const app = express();
 
+function getAddress(req) {
+  const ip = req.headers['x-forwarded-for'] || req.ip;
+
+  return ip.split(',')[0];
+}
+
 function parseLanguage(input) {
   return input.split(',')[0];
 }
@@ -13,7 +19,7 @@ function parseSoftware(input) {
 
 app.get('/', (req, res) => {
   const result = {
-    ipaddress: req.connection.remoteAddress,
+    ipaddress: getAddress(req),
     language: parseLanguage(req.get('accept-language')),
     software: parseSoftware(req.get('user-agent'))
   }
